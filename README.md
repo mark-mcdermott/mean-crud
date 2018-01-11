@@ -24,9 +24,13 @@ to get Auth0 working, get an Auth0 account https://auth0.com/
 
 create an Auth0 client
 
-in the client settings get your clientID, domain.
+in the Auth0 client settings get your clientID, domain.
 
-in the client settings set a callback url to <yourdomain.com>/callback
+in the Auth0 client settings set a callback url to <yourdomain.com>/callback
+
+in /src/app/auth-vars/ rename auth0-variables.ts.example to auth0-variables.ts
+
+follow the instructions in auth0-variables.ts to add your clientID, domain & callback url in there
 
 upload the app to your server (Auth0 doesn't work on localhost sometimes)
 
