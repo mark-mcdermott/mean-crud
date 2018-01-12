@@ -6,8 +6,8 @@ import { Book } from '../../models/book' ;
 
 @Injectable()
 export class BookService {
-  domain: string = 'http://localhost:3000';
-  // domain: string = 'www.mydomainapi.com/';
+  //domain: string = 'http://localhost:3000';
+  domain: string = '34.215.246.25:3000';
 
   constructor(private http: HttpClient) { }
 
