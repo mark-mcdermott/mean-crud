@@ -12,7 +12,7 @@ in another tab `git clone https://github.com/mark-mcdermott/mean-crud.git`
 
 `npm install`
 
-`node api-server`
+`node api-server.js`
 
 in another tab, `ng serve`
 
