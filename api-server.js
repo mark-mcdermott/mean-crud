@@ -66,7 +66,11 @@ app.put('/api/books/:id', (req, res, next) => {
     if(book.title) {
         updateBook.title = book.title;
     }
-    if(!updateTask) {
+    db.books.update({_id: mongojs.ObjectId(req.params.id)}, updateBook, {}, (err, book) => {
+        if (err) return next(err);
+        res.json(book);
+    });
+    /*if(!updateTask) {
         res.status(400);
         res.json({'error': 'bad request'});
     } else {
@@ -74,7 +78,7 @@ app.put('/api/books/:id', (req, res, next) => {
             if (err) return next(err);
             res.json(book);
         });
-    }
+    }*/
 });
 
 // server
